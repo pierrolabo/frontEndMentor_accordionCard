@@ -1,0 +1,22 @@
+// Font family
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$font-stack: 'Kumbh Sans', sans-serif;
+$font-light: 400;
+$font-heavy: 700;
+
+//  Colors
+$brand-primary: hsl(238, 29%, 16%);
+$brand-secondary: hsl(14, 88%, 65%);
+
+$gradient-violet: hsl(273, 75%, 66%);
+$gradient-blue: hsl(240, 73%, 65%);
+
+$neutral-primary: hsl(237, 12%, 33%);
+$neutral-secondary: hsl(240, 6%, 50%);
+
+$divider-color: hsl(240, 5%, 91%);
+
+//  Breakpoint
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;

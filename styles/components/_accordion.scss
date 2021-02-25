@@ -1,0 +1,114 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 34rem;
+  max-width: 400px;
+  min-width: 20rem;
+  height: 42rem;
+  width: 100%;
+  margin: 0 2rem;
+  margin-top: 4rem;
+  padding: 4rem 1rem;
+  background-color: white;
+  border-radius: 1.5em;
+  position: relative;
+
+  //  Iphone 6
+  @media (max-height: 670px) {
+    height: 38rem;
+    margin: auto 2rem;
+  }
+  //  Iphone 5
+  @media (max-height: 600px) {
+    height: 38rem;
+
+    margin: 0 1.4rem;
+    margin-top: 82px;
+  }
+
+  @media (orientation: landscape) and (max-height: 400px) {
+    height: 21rem;
+  }
+  &--background-top {
+    background: url('../../dist/images/illustration-woman-online-mobile.svg');
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    top: 0;
+    transform: translateY(-54%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-origin: border-box;
+    margin-top: 1px;
+    margin-right: 30px;
+  }
+  &--background-bottom {
+    background: url('../../dist/images/bg-pattern-mobile.svg');
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+    // margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid $divider-color;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem;
+    color: $neutral-primary;
+  }
+  &--arrow {
+    background: url(../../dist/images/icon-arrow-down.svg);
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__item:target &__answer p {
+    display: block;
+    max-height: 20rem;
+  }
+
+  &__item:target &__link {
+    color: $brand-primary;
+    font-weight: $font-heavy;
+  }
+  &__answer {
+    display: flex;
+  }
+  &__answer p {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 0.2rem 1rem;
+    margin-bottom: 1rem;
+    color: $neutral-secondary;
+  }
+}
